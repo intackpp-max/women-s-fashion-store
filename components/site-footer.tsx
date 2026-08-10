@@ -77,7 +77,7 @@ export function SiteFooter() {
             통신판매업신고 제0000-서울강남-00000호 · 고객센터
             1588-0000 (평일 10:00–18:00)
           </p>
-          <p>&copy; {new Date().getFullYear()} VELOUR. All rights reserved.</p>
+          <p>&copy; 2026 VELOUR. All rights reserved.</p>
         </div>
       </div>
     </footer>

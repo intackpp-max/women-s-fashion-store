@@ -57,14 +57,13 @@ export function BrandStory() {
           </ul>
           <div>
             <Button
-              asChild
               variant="outline"
               className="h-11 shrink-0 rounded-full px-7 whitespace-nowrap"
+              nativeButton={false}
+              render={<Link href="#about" />}
             >
-              <Link href="#about">
-                브랜드 스토리 전체 보기
-                <ArrowRight data-icon="inline-end" />
-              </Link>
+              브랜드 스토리 전체 보기
+              <ArrowRight data-icon="inline-end" />
             </Button>
           </div>
         </div>

@@ -26,14 +26,13 @@ export function Hero() {
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-4">
             <Button
-              asChild
               size="lg"
               className="h-11 shrink-0 rounded-full px-8 whitespace-nowrap"
+              nativeButton={false}
+              render={<Link href="#categories" />}
             >
-              <Link href="#categories">
-                컬렉션 둘러보기
-                <ArrowRight data-icon="inline-end" />
-              </Link>
+              컬렉션 둘러보기
+              <ArrowRight data-icon="inline-end" />
             </Button>
             <Link
               href="#story"

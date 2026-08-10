@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, Search, ShoppingBag, User } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import {
   Sheet,
   SheetContent,
@@ -12,6 +12,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
   { label: '신상', href: '#new' },
@@ -29,15 +30,14 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-10">
         <div className="flex items-center gap-2 sm:gap-4">
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="lg:hidden"
-                aria-label="메뉴 열기"
-              >
-                <Menu />
-              </Button>
+            <SheetTrigger
+              aria-label="메뉴 열기"
+              className={cn(
+                buttonVariants({ variant: 'ghost', size: 'icon' }),
+                'lg:hidden'
+              )}
+            >
+              <Menu />
             </SheetTrigger>
             <SheetContent side="left" className="w-72 bg-background">
               <SheetHeader>
